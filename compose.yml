@@ -2,6 +2,7 @@ version: "3.6"
 services:
   wordpress:
     image: wordpress:latest
+    user: 1000:1000
     container_name: wordpress
     volumes:
       - ./wp-content:/var/www/html/wp-content
