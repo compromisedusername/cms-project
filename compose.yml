@@ -2,10 +2,10 @@ version: "3.6"
 services:
   wordpress:
     image: wordpress:latest
-    user: 1000:1000
     container_name: wordpress
     volumes:
-      - ./wp-content:/var/www/html/wp-content
+      #- ./wp-content:/var/www/html/wp-content
+      - ./html:/var/www/html
     environment:
       - WORDPRESS_DB_NAME=wordpress
       - WORDPRESS_TABLE_PREFIX=wp_
