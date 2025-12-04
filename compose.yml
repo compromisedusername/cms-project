@@ -2,7 +2,7 @@ version: "3.6"
 services:
   wordpress:
     image: wordpress:latest
-    user: 1000:1000
+    user: ${LOCAL_UID}:${LOCAL_GID}
     container_name: wordpress
     volumes:
       - ./wp-content:/var/www/html/wp-content
