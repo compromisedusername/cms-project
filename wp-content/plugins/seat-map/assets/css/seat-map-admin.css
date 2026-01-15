@@ -1,0 +1,81 @@
+.seat-map-layout-builder {
+    margin-top: 1rem;
+}
+
+.seat-map-layout-builder table th,
+.seat-map-layout-builder table td {
+    text-align: left;
+}
+
+.seat-map-layout-builder input[type="number"] {
+    width: 100%;
+    max-width: 90px;
+}
+
+.seat-map-layout-builder input[type="text"] {
+    width: 100%;
+}
+
+.seat-map-admin-preview {
+    position: relative;
+    margin-top: 1rem;
+    border: 1px dashed #ccd0d4;
+    border-radius: 8px;
+    padding-top: 25%;
+    background: repeating-linear-gradient(0deg, rgba(0,0,0,0.04) 0, rgba(0,0,0,0.04) 1px, transparent 1px, transparent 20%),
+                repeating-linear-gradient(90deg, rgba(0,0,0,0.04) 0, rgba(0,0,0,0.04) 1px, transparent 1px, transparent 20%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.seat-map-admin-preview::after {
+    content: '0 → 100';
+    position: absolute;
+    bottom: 4px;
+    right: 8px;
+    font-size: 12px;
+    color: #555d66;
+}
+
+.seat-map-admin-preview::before {
+    content: '↑ 100';
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    font-size: 12px;
+    color: #555d66;
+}
+
+.seat-map-background-preview {
+    width: 200px;
+    height: 120px;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.seat-map-background-preview img {
+    max-width: 100%;
+    height: auto;
+}
+
+.seat-map-admin-preview .seat-map-marker {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    border-radius: 50%;
+    background: #21759b;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}

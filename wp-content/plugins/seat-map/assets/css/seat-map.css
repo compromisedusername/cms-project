@@ -1,0 +1,151 @@
+.seat-map-field {
+    margin-bottom: 1.5rem;
+}
+
+.seat-map-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.seat-map-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    min-height: 72px;
+    background: #fafafa;
+}
+
+.seat-map-placeholder {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.seat-map-button {
+    border: 1px solid #c9d1d9;
+    border-radius: 6px;
+    background: #fdfdfd;
+    cursor: pointer;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.95rem;
+    transition: all 0.2s ease-in-out;
+    color: #1d2327;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 84px;
+    text-align: center;
+}
+
+.seat-map-button-id {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.seat-map-button-capacity {
+    font-size: 0.75rem;
+    color: #4f5b66;
+}
+
+.seat-map-button.is-available:hover,
+.seat-map-button.is-available:focus {
+    border-color: #21759b;
+    color: #21759b;
+}
+
+.seat-map-button.is-selected {
+    border-color: #21759b;
+    background: #e5f3ff;
+    color: #12445c;
+}
+
+.seat-map-button.is-booked {
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+.seat-map-button.is-capacity {
+    cursor: not-allowed;
+    opacity: 0.6;
+    border-style: dashed;
+}
+
+.seat-map-feedback {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    min-height: 1rem;
+}
+
+.seat-map-feedback.is-error {
+    color: #b71c1c;
+}
+
+.seat-map-feedback.is-success {
+    color: #1b5e20;
+}
+
+.seat-map-floor {
+    position: relative;
+    margin-top: 1rem;
+    border: 1px dashed #c6ccd2;
+    border-radius: 8px;
+    padding-top: 28.125%;
+    background-color: #fdfdfd;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.seat-map-floor::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(0deg, rgba(255,255,255,0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px);
+    background-size: 20% 20%;
+    pointer-events: none;
+}
+
+.seat-map-marker {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #21759b;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    font-size: 0.75rem;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.seat-map-marker.is-booked {
+    background: #b3bec8;
+    cursor: not-allowed;
+}
+
+.seat-map-marker.is-capacity {
+    background: #ffa000;
+    color: #1d2327;
+}
+
+.seat-map-marker.is-selected {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 0 10px rgba(33, 117, 155, 0.4);
+}
+
+.seat-map-floor-placeholder {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555d66;
+}
